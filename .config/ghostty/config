@@ -1,0 +1,16 @@
+# This is the configuration file for Ghostty.
+#
+# Run `ghostty +show-config --default --docs` to view a list of
+# all available config options and their default values.
+#
+# Additionally, each config option is also explained in detail
+# on Ghostty's website, at https://ghostty.org/docs/config.
+
+theme = Catppuccin Frappe
+font-size = 16
+window-padding-x = 8,16
+window-padding-y = 8,16
+window-width = 100
+window-height = 28
+font-family = "JetBrains Mono NL"
+shell-integration-features = ssh-env
