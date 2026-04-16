@@ -28,6 +28,9 @@ This directory contains my dotfiles managed with [GNU Stow](https://www.gnu.org/
 git clone https://github.com/lucasamonrc/dotfiles.git ~/dotfiles
 cd ~/dotfiles
 
+# Back up existing dotfiles before overwriting them
+./scripts/backup.sh
+
 # Install zsh dependencies (oh-my-zsh, spaceship theme, zinit)
 ./scripts/setup-zsh.sh
 
@@ -43,4 +46,4 @@ stow .
 - **SSH keys** are not managed here — only `~/.ssh/config`
 - **`~/.config/gh/hosts.yml`** is excluded (contains OAuth tokens)
 - **`~/.claude/settings.local.json`** is excluded (machine-specific)
-- Backup your existing dotfiles before running `stow .` if you haven't already
+- Run `./scripts/backup.sh` any time to snapshot current dotfiles to a timestamped directory in `~`; only real files are copied (symlinks are skipped)
