@@ -1,21 +1,46 @@
 # My dotfiles
 
-This directory contains the dotfiles for my environment
+This directory contains my dotfiles managed with [GNU Stow](https://www.gnu.org/software/stow/). Works on both macOS and Linux.
+
+## What's managed
+
+| Config | Path |
+|--------|------|
+| Zsh | `~/.zshrc`, `~/.zprofile` |
+| SSH | `~/.ssh/config` |
+| Git | `~/.config/git/config` |
+| Ghostty | `~/.config/ghostty/` |
+| GitHub CLI | `~/.config/gh/config.yml` |
+| Claude Code | `~/.claude/settings.json`, `CLAUDE.md`, `commands/`, `skills/` |
+| opencode | `~/.config/opencode/opencode.json`, `skills/`, `package.json` |
+| VS Code | `~/Library/Application Support/Code/User/` (macOS) or `~/.config/Code/User/` (Linux) |
 
 ## Requirements
 
-Ensure you the following dependencies installed on your system:
-- Git
-- zsh
-- oh-my-zsh
-- Zinit (plugins for zsh)
-
-For `oh-my-zsh` and `zinit` you can run [`./scripts/setup-zsh.sh`](./scripts/setup-zsh.sh) to get them installed.
+- **GNU Stow** — for managing symlinks
+- **Git >= 2.23** — required by git aliases (`switch`, `defaultBranch`)
+- **zsh** — shell configuration
+- **oh-my-zsh** + **Zinit** — run `./scripts/setup-zsh.sh` to install
 
 ## Installation
 
 ```sh
-git clone https://github.com/lucasamonrc/dotfiles.git
-cd dotfiles 
+git clone https://github.com/lucasamonrc/dotfiles.git ~/dotfiles
+cd ~/dotfiles
+
+# Install zsh dependencies (oh-my-zsh, spaceship theme, zinit)
+./scripts/setup-zsh.sh
+
+# Symlink all dotfiles
 stow .
+
+# Symlink VS Code settings (handles macOS/Linux path differences)
+./scripts/setup-vscode.sh
 ```
+
+## Notes
+
+- **SSH keys** are not managed here — only `~/.ssh/config`
+- **`~/.config/gh/hosts.yml`** is excluded (contains OAuth tokens)
+- **`~/.claude/settings.local.json`** is excluded (machine-specific)
+- Backup your existing dotfiles before running `stow .` if you haven't already
