@@ -157,9 +157,6 @@ autoload -Uz compinit
 compinit
 # End of Docker CLI completions
 export PATH="/opt/homebrew/bin:$PATH"
-export JAVA_HOME="/opt/homebrew/opt/openjdk/libexec/openjdk.jdk/Contents/Home"
-
-alias forward-local="ngrok http https://localhost:3001 --domain provider-a.trinsic-local.com"
 
 # opencode
 export PATH=/Users/lucas/.opencode/bin:$PATH
