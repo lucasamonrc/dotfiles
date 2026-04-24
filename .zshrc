@@ -160,8 +160,6 @@ export PATH="/opt/homebrew/bin:$PATH"
 
 # opencode
 export PATH=/Users/lucas/.opencode/bin:$PATH
-# Add .NET Core SDK tools
-export PATH="$PATH:/Users/lucas/.dotnet/tools"
 export PATH="$HOME/.local/bin:$PATH"
 
 
