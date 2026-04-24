@@ -26,7 +26,6 @@ scripts
 
 # Sensitive / generated files
 \.config/gh/hosts\.yml
-\.claude/settings\.local\.json
 \.config/opencode/node_modules
 
 # Managed by scripts/setup-vscode.sh (not stow)

@@ -11,7 +11,6 @@ This directory contains my dotfiles managed with [GNU Stow](https://www.gnu.org/
 | Git | `~/.config/git/config` |
 | Ghostty | `~/.config/ghostty/` |
 | GitHub CLI | `~/.config/gh/config.yml` |
-| Claude Code | `~/.claude/settings.json`, `CLAUDE.md`, `commands/`, `skills/` |
 | opencode | `~/.config/opencode/opencode.json`, `skills/`, `package.json` |
 | VS Code | `~/Library/Application Support/Code/User/` (macOS) or `~/.config/Code/User/` (Linux) |
 
@@ -45,5 +44,4 @@ stow .
 
 - **SSH keys** are not managed here — only `~/.ssh/config`
 - **`~/.config/gh/hosts.yml`** is excluded (contains OAuth tokens)
-- **`~/.claude/settings.local.json`** is excluded (machine-specific)
 - Run `./scripts/backup.sh` any time to snapshot current dotfiles to a timestamped directory in `~`; only real files are copied (symlinks are skipped)
