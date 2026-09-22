@@ -1,7 +1,7 @@
 # Aliases
 alias sshhome="cd ~/.ssh"
 alias configs="cd ~/.config"
-alias zshsrc="vim ~/.zshrc"
+alias zshsrc="nano ~/.zshrc"
 alias nvminit="nvm use --lts"
 
 # Load Prompt
