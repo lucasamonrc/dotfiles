@@ -1,6 +1,15 @@
-# Lucas's dotfiles
+<div align="center">
 
-Personal shell and developer-environment configuration for Linux/WSL and Windows.
+# 🛠️ dotfiles
+
+**My shell and developer-environment config for Linux/WSL and Windows, in one repo.**
+
+![Zsh](https://img.shields.io/badge/Zsh-F15A24?logo=zsh&logoColor=white)
+![PowerShell](https://img.shields.io/badge/PowerShell-5391FE?logo=powershell&logoColor=white)
+![GNU Stow](https://img.shields.io/badge/managed%20with-GNU%20Stow-555)
+![Starship](https://img.shields.io/badge/prompt-Starship-DD0B78?logo=starship&logoColor=white)
+
+</div>
 
 This repository keeps shared configuration in one place while allowing each operating system to have its own setup:
 
